@@ -66,46 +66,46 @@ The evaluator (or you) must provide these:
 # ▶️ Running Locally (Without Docker)
 
 ### 1. Create virtual environment
-python -m venv venv
-venv\Scripts\activate.bat
+  -  python -m venv venv
+  -  venv\Scripts\activate.bat
 
 ### 2. Install dependencies
-pip install -r requirements.txt
+  - pip install -r requirements.txt
 
 ### 3. Export environment variables
 `open cmd`
-set ADMIN_API_KEY=anyname
-set API_LISTENING_PORT=8000
-set DB_HOST=localhost
-set DB_PORT=3306
-set DB_NAME=library
-set DB_USERNAME="user name that u created(mysql)"
-set DB_PASSWORD="password"     (without quotes)
+  -  set ADMIN_API_KEY=anyname
+  -  set API_LISTENING_PORT=8000
+  -  set DB_HOST=localhost
+  -  set DB_PORT=3306
+  -  set DB_NAME=library
+  -  set DB_USERNAME="user name that u created(mysql)"
+  -  set DB_PASSWORD="password"     (without quotes)
 
 ### 4. Run server
 `same cmd`
-python -m app.main
+  -  python -m app.main
 
 ### 5. Open Swagger UI
-👉 http://localhost:8000/docs
-`in browser`
+  -  👉 http://localhost:8000/docs
 ---
 
 # 🧪 Testing Flow (Recommended)
-POST /user/register
-POST /user/login → session cookie set
-Authorize as admin → add books
-GET /books
-POST /borrow
-GET /borrowed
-DELETE /return/{isbn}
-DELETE /books/{isbn}
+  -  POST /user/register
+  -  POST /user/login → session cookie set
+  -  Authorize as admin → add books
+  -  GET /books
+  -  POST /borrow
+  -  GET /borrowed
+  -  DELETE /return/{isbn}
+  -  DELETE /books/{isbn}
 
 ---
 
 # Common Errors & Fixes
 Error	Meaning	Fix
-401 - Missing admin API key	You didn't send Bearer token - Use Swagger "Authorize"
-401 - Missing session cookie	User not logged in - Login first
-400 - Weak password	Password not strong - Use strong password
-400 - Duplicate ISBN	Book already exists - Use unique ISBN
+  -  401 - Missing admin API key	You didn't send Bearer token - Use Swagger "Authorize"
+  -  401 - Missing session cookie	User not logged in - Login first
+  -  400 - Weak password	Password not strong - Use strong password
+  -  400 - Duplicate ISBN	Book already exists - Use unique ISBN
+
