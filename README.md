@@ -73,7 +73,7 @@ venv\Scripts\activate.bat
 pip install -r requirements.txt
 
 ### 3. Export environment variables
-```open cmd
+`open cmd`
 set ADMIN_API_KEY=anyname
 set API_LISTENING_PORT=8000
 set DB_HOST=localhost
@@ -83,12 +83,12 @@ set DB_USERNAME="user name that u created(mysql)"
 set DB_PASSWORD="password"     (without quotes)
 
 ### 4. Run server
-```same cmd
+`same cmd`
 python -m app.main
 
 ### 5. Open Swagger UI
 👉 http://localhost:8000/docs
-
+`in browser`
 ---
 
 # 🧪 Testing Flow (Recommended)
